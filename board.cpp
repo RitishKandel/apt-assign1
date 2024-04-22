@@ -133,7 +133,6 @@ void Board::display(Player *player)
 
 void Board::printEmptyBoard()
 {
-    cout << endl;
     cout << LINE_OUTPUT << EMPTY_OUTPUT << LINE_OUTPUT;
     for (unsigned topLabel = 0; topLabel < BOARD_NUM_COLUMNS; ++topLabel)
     {
@@ -154,5 +153,6 @@ void Board::printEmptyBoard()
         }
         cout << endl;
     }
+
     cout << endl;
 }

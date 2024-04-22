@@ -17,6 +17,7 @@ Game::~Game()
 
 void Game::start()
 {
+    cout << endl;
     cout << "You can use the following commands to play the game:" << endl;
     cout << endl;
     cout << "load <g>" << endl;

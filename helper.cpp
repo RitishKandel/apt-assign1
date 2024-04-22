@@ -7,6 +7,7 @@ Helper::Helper() {}
 
 void Helper::printInvalidInput()
 {
+
     std::cout << "Invalid input.\n"
               << std::endl;
 }
@@ -74,6 +75,7 @@ string Helper::readInputIgnoringEOF()
         std::cout << std::endl;
         clearerr(stdin);
     }
+    std::cout << std::endl;
     return input;
 }
 
