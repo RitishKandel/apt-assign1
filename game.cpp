@@ -126,14 +126,17 @@ bool Game::initializePlayer()
             commandArgIsValidPosition = Helper::validateInitCommandArg(tokens[1]);
         }
 
+        // take if command is quit
         if (input == COMMAND_QUIT)
         {
             quit = true;
         }
+        // take if command is load and valid
         else if (commandIsLoad && commandArgIsValidBoard)
         {
             board->load(stoi(tokens[1]));
         }
+        // take if command is init and valid
         else if (commandIsInit && commandArgIsValidPosition)
         {
             // get the arguments of the init command
@@ -156,6 +159,7 @@ bool Game::initializePlayer()
             {
                 // if place player does not return true then the position is blocked
                 cout << "Unable to place player at position: " << x << "," << y << endl;
+                cout << endl;
             }
         }
         else
@@ -192,10 +196,12 @@ void Game::play()
             if (moveStatus == CELL_BLOCKED)
             {
                 cout << "Error: Unable to move - cell is blocked." << endl;
+                cout << endl;
             }
             else if (moveStatus == OUTSIDE_BOUNDS)
             {
-                cout << "Error: Unable to move - out of bounds." << endl;
+                cout << "“The vacuum cleaner is at the edge of the board and cannot move further in that direction." << endl;
+                cout << endl;
             }
             else
             {
